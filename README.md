@@ -7,7 +7,15 @@ A minimal AVS to determine whether an endpoint is up/reachable.
 
 ## Architecture
 
+# Usage
 
+```
+go run main.go https://example.com
+
+#or
+go build
+./are-you-up http://google.com
+```
 
 # todos
 Add https://github.com/urfave/cli/
