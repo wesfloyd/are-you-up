@@ -1,6 +1,6 @@
 <img src="assets/kramer-up.jpeg" alt="kramer-up" width="300"/>
 
-# Are You Up? (AYU)
+# Are You Up?
 A minimal AVS to determine probabilistically whether an endpoint is up/reachable and confirm on-chain.
 
 ## Motivations
