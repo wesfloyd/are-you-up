@@ -1,4 +1,4 @@
-# Makefile for my-web-pinger
+# Makefile for are-you-up
 
 # Go parameters
 GOCMD=go
@@ -8,7 +8,7 @@ GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 
 # Main program
-BINARY_NAME=my-web-pinger
+BINARY_NAME=are-you-up
 
 all: test build
 

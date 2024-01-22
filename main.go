@@ -4,38 +4,39 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"os"
+	"os/exec"
+	"strings"
 )
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("Usage: my-web-pinger <url>")
+		fmt.Println("Usage: are-you-up <ip-address-or-domain>")
 		os.Exit(1)
 	}
 
-	url := os.Args[1]
-	fmt.Printf("Pinging %s...\n", url)
+	target := os.Args[1]
+	fmt.Printf("Pinging %s...\n", target)
 
-	err := pingURL(url)
+	err := runPing(target)
 	if err != nil {
 		fmt.Printf("Error: %s\n", err)
 		os.Exit(1)
 	}
 
-	fmt.Println("URL is live!")
+	fmt.Println("Ping completed.")
 }
 
-func pingURL(url string) error {
-	resp, err := http.Get(url)
-	if err != nil {
-		return err
-	}
-	defer resp.Body.Close()
+func runPing(target string) error {
+	cmd := exec.Command("ping", "-c", "4", target)
+	output, err := cmd.CombinedOutput()
 
-	if resp.StatusCode != http.StatusOK {
-		return fmt.Errorf("Received non-OK status code: %d", resp.StatusCode)
+	if err != nil {
+		return fmt.Errorf("Failed to execute ping: %s", err)
 	}
+
+	fmt.Println("Ping output:")
+	fmt.Println(strings.TrimSpace(string(output)))
 
 	return nil
 }

@@ -41,7 +41,7 @@ More robust logging (traceroute) of each request to make cheating more difficult
 # Usage
 
 ```
-go run main.go https://example.com
+go run main.go <ip-address-or-domain>
 
 #or
 go build
