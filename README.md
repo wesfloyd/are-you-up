@@ -41,14 +41,11 @@ go build
 ./are-you-up http://google.com
 ```
 
-# todos
-Add AVS registration smart contracts
-Determine the best initial invocation process: off chain vs on chain?
-Determine the best place for users to write results: on chain (L1, L2), EigenDA, IPFS?
-Add https://github.com/urfave/cli/
-Add dockerfile - FROM golang:latest
-
-
-# Open Questions
+# Todos
+- Add AVS registration smart contracts
+- Determine the best initial invocation process: off chain vs on chain?
+- Determine the best place for users to write results: on chain (L1, L2), EigenDA, IPFS?
+- Add https://github.com/urfave/cli/
+- Add dockerfile - FROM golang:latest
 
 
