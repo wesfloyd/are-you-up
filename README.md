@@ -15,12 +15,12 @@ A minimal AVS to determine probabilistically whether an endpoint is up/reachable
 
 ### Process flow
 
-User submits request for an endpoint to be tested for liveliness.
-The network of AYU operators all test the liveliness of that endpoint and report their results.
-Record of the endpoint and its liveliness (via ping, traceroute, etc.).
-Incentives:
-- Slash AYU operators that do not report their liveliness results for a given request.
-- Pay AYU operators that report results for a given request.
+- User submits request for an endpoint to be tested for liveliness.
+- The network of AYU operators all test the liveliness of that endpoint and report their results.
+- Record of the endpoint and its liveliness (via ping, traceroute, etc.).
+- Incentives:
+  - Slash AYU operators that do not report their liveliness results for a given request.
+  - Pay AYU operators that report results for a given request.
 
 
 ### Operator Image
@@ -41,14 +41,11 @@ go build
 ./are-you-up http://google.com
 ```
 
-# todos
-Add AVS registration smart contracts
-Determine the best initial invocation process: off chain vs on chain?
-Determine the best place for users to write results: on chain (L1, L2), EigenDA, IPFS?
-Add https://github.com/urfave/cli/
-Add dockerfile - FROM golang:latest
-
-
-# Open Questions
+# Todos
+- Add AVS registration smart contracts
+- Determine the best initial invocation process: off chain vs on chain?
+- Determine the best place for users to write results: on chain (L1, L2), EigenDA, IPFS?
+- Add https://github.com/urfave/cli/
+- Add dockerfile - FROM golang:latest
 
 
